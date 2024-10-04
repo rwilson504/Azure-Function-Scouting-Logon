@@ -1,0 +1,7 @@
+{
+    "azureAutomation.directory.basePath": "c:\\Users\\ricwilson",
+    "azureFunctions.projectLanguage": "C#",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "publish (functions)",
+}
