@@ -90,7 +90,10 @@ Below is the schema and sample output for `LOGIN_DATA` returned by the `GetLogin
 
 ## Using the JWT Token in Power Apps
 
-Once you have the JWT token, you can use it in **Power Automate** or **Power Apps** to make API calls to Scouting APIs.
+Once you have the JWT token, you can use it in **Power Automate** or **Power Apps** to make API calls to Scouting APIs.  You can download the samples for this solution.
+
+- [Managed](Samples/ScoutingAPI_1_0_0_1_managed.zip)
+- [Unmanaged](Samples/ScoutingAPI_1_0_0_1.zip)
 
 1. **Use the Get secret action from Azure Key Vault** to retrieve the `aad-client-secret` from the Key Vault used for the Azure Function.
 
@@ -107,7 +110,7 @@ Once you have the JWT token, you can use it in **Power Automate** or **Power App
     Enter the authentication information for the action.  
     ![HTTP Action to get Log Info](images/image-3.png)  
 
-4. **Get the JWT token** from the response using a **Parse JSON** action. Here�s a sample JSON schema:
+3. **Get the JWT token** from the response using a **Parse JSON** action. Here�s a sample JSON schema:
 
    ```json
    {
@@ -154,7 +157,7 @@ Once you have the JWT token, you can use it in **Power Automate** or **Power App
    }
    ```
 
-5. **Add an HTTP action** to call the Scouting API endpoint, such as `https://api.scouting.org/lookups/person/grades`. Use **Raw** as the **Authentication type**. Set the **Authorization** header to **Bearer** and use the JWT token obtained previously (e.g., `Bearer eyHsdlfkjsdweoriweoru...`). The token will come from the Parse JSON action created earlier.
+4. **Add an HTTP action** to call the Scouting API endpoint, such as `https://api.scouting.org/lookups/person/grades`. Use **Raw** as the **Authentication type**. Set the **Authorization** header to **Bearer** and use the JWT token obtained previously (e.g., `Bearer eyHsdlfkjsdweoriweoru...`). The token will come from the Parse JSON action created earlier.
 
     ![Call other APIs](images/image-4.png)
 
