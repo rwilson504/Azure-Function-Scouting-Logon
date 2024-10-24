@@ -1,4 +1,4 @@
-# Azure Function Calling Selenium for Interactive Login and Token Retrieval
+![Azure Function Calling Selenium for Interactive Login and Token Retrieval](https://github.com/user-attachments/assets/147758a1-b490-4ecb-82a9-055136567b2a)
 
 This project contains an Azure Function that automates the process of retrieving an API JWT token required to make subsequent calls to the Scouting API. The Azure Function uses Selenium to log in interactively, obtain the login credentials, and provide them back to the caller. To get started, you can utilize the [Azure-Function-Selenium-Infrastructure-Setup](https://github.com/rwilson504/Azure-Function-Selenium-Infrastructure-Setup) project, which deploys an Azure Function using a Selenium container hosted in an Azure Container Instance (ACI).
 
